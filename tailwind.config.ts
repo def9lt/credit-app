@@ -5,6 +5,14 @@ module.exports = {
     "components/**/*.{ts,tsx}",
   ],
   theme: {
+    screens: {
+      'xs': '360px',
+      'sm': '480px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1440px',
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
