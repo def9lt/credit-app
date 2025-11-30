@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+const TELEGRAM_LINK = "https://t.me/sup_resolve";
+
 const features = [
   {
     icon: "/figmaAssets/component-1-19.svg",
@@ -85,10 +87,15 @@ export const HeroSection = (): JSX.Element => {
             </div>
 
             <div className="flex flex-col items-center relative self-stretch w-full">
-              <Button className="px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-lg sm:rounded-[10px] overflow-hidden shadow-[0px_4px_6px_-4px_#ff68004c,0px_10px_15px_-3px_#ff68004c] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] hover:bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)]">
-                <span className="w-fit text-white text-[12px] sm:text-[13px] text-center tracking-[0] leading-5 sm:leading-6 whitespace-nowrap [font-family:'Robloxian_2-Black',Helvetica] font-black">
-                  Оформить кредитные каникулы
-                </span>
+              <Button 
+                asChild
+                className="px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-lg sm:rounded-[10px] overflow-hidden shadow-[0px_4px_6px_-4px_#ff68004c,0px_10px_15px_-3px_#ff68004c] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] hover:bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)]"
+              >
+                <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+                  <span className="w-fit text-white text-[12px] sm:text-[13px] text-center tracking-[0] leading-5 sm:leading-6 whitespace-nowrap [font-family:'Robloxian_2-Black',Helvetica] font-black">
+                    Оформить кредитные каникулы
+                  </span>
+                </a>
               </Button>
             </div>
           </div>

@@ -3,6 +3,8 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+const TELEGRAM_LINK = "https://t.me/sup_resolve";
+
 export const FooterSection = (): JSX.Element => {
   return (
     <section className="relative w-full py-16 sm:py-20 md:py-28 lg:py-40 px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 2xl:pl-[344px] 2xl:pr-[344px] bg-[linear-gradient(168deg,rgba(43,25,15,1)_0%,rgba(61,29,29,1)_50%,rgba(43,30,15,1)_100%)]">
@@ -33,20 +35,28 @@ export const FooterSection = (): JSX.Element => {
         </div>
 
         <div className="flex flex-col xs:flex-row items-start gap-3 sm:gap-4 pt-4 sm:pt-6 pb-0 px-0 self-stretch w-full">
-          <Button className="h-auto gap-2 px-5 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-[17px] rounded-lg sm:rounded-[10px] shadow-[0px_4px_6px_-4px_#ff68004c,0px_10px_15px_-3px_#ff68004c] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] hover:bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] w-full xs:w-auto">
-            <span className="text-white text-[12px] sm:text-[13.1px] text-center tracking-[0] leading-5 sm:leading-6 whitespace-nowrap [font-family:'Robloxian_2-Black',Helvetica] font-black">
-              Получить консультацию
-            </span>
-            <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+          <Button 
+            asChild
+            className="h-auto gap-2 px-5 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-[17px] rounded-lg sm:rounded-[10px] shadow-[0px_4px_6px_-4px_#ff68004c,0px_10px_15px_-3px_#ff68004c] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] hover:bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] w-full xs:w-auto"
+          >
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2">
+              <span className="text-white text-[12px] sm:text-[13.1px] text-center tracking-[0] leading-5 sm:leading-6 whitespace-nowrap [font-family:'Robloxian_2-Black',Helvetica] font-black">
+                Получить консультацию
+              </span>
+              <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+            </a>
           </Button>
 
           <Button
+            asChild
             variant="outline"
             className="h-auto px-5 py-3 sm:px-6 sm:py-3.5 md:px-8 md:py-4 bg-[#fffefe1a] rounded-lg sm:rounded-[10px] border border-solid border-[#fffefe33] backdrop-blur-sm backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4px)_brightness(100%)] hover:bg-[#fffefe1a] w-full xs:w-auto"
           >
-            <span className="text-white text-[12px] sm:text-[13px] text-center tracking-[0] leading-5 sm:leading-6 whitespace-nowrap [font-family:'Robloxian_2-Black',Helvetica] font-black">
-              Узнать подробнее
-            </span>
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              <span className="text-white text-[12px] sm:text-[13px] text-center tracking-[0] leading-5 sm:leading-6 whitespace-nowrap [font-family:'Robloxian_2-Black',Helvetica] font-black">
+                Узнать подробнее
+              </span>
+            </a>
           </Button>
         </div>
       </div>

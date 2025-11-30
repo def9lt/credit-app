@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+const TELEGRAM_LINK = "https://t.me/sup_resolve";
+
 export const AboutUsSection = (): JSX.Element => {
   return (
     <section className="px-4 sm:px-6 md:px-12 lg:px-24 xl:px-32 2xl:px-[344px] py-12 sm:py-16 md:py-20 lg:py-24 bg-white flex flex-col w-full items-start">
@@ -30,10 +32,15 @@ export const AboutUsSection = (): JSX.Element => {
             </h2>
           </div>
 
-          <Button className="px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 h-auto rounded-xl sm:rounded-[14px] overflow-hidden shadow-[0px_4px_6px_-4px_#ff68004c,0px_10px_15px_-3px_#ff68004c] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] inline-flex items-center justify-center hover:opacity-90 transition-opacity">
-            <span className="flex items-center justify-center w-fit [font-family:'Robloxian_2-Black',Helvetica] font-black text-white text-[13px] sm:text-[14px] md:text-[15px] text-center tracking-[0] leading-6 sm:leading-7 whitespace-nowrap">
-              Связаться в Telegram
-            </span>
+          <Button 
+            asChild
+            className="px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 h-auto rounded-xl sm:rounded-[14px] overflow-hidden shadow-[0px_4px_6px_-4px_#ff68004c,0px_10px_15px_-3px_#ff68004c] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] inline-flex items-center justify-center hover:opacity-90 transition-opacity"
+          >
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              <span className="flex items-center justify-center w-fit [font-family:'Robloxian_2-Black',Helvetica] font-black text-white text-[13px] sm:text-[14px] md:text-[15px] text-center tracking-[0] leading-6 sm:leading-7 whitespace-nowrap">
+                Связаться в Telegram
+              </span>
+            </a>
           </Button>
         </CardContent>
       </Card>

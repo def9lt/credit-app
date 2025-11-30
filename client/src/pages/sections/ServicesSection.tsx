@@ -3,6 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+const TELEGRAM_LINK = "https://t.me/sup_resolve";
+
 const features = [
   "До 90% от рыночной стоимости под низкие ставки",
   "Предоставление собственного залога для ускорения одобрения",
@@ -73,10 +75,15 @@ export const ServicesSection = (): JSX.Element => {
             ))}
           </div>
 
-          <Button className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-lg sm:rounded-[10px] shadow-[0px_4px_6px_-4px_#ff680033,0px_10px_15px_-3px_#ff680033] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] hover:opacity-90">
-            <span className="text-white text-[12px] sm:text-[13.1px] text-center tracking-[0] leading-5 sm:leading-6 [font-family:'Robloxian_2-Black',Helvetica] font-black">
-              Подробнее о залоговых кредитах
-            </span>
+          <Button 
+            asChild
+            className="inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-4 h-auto rounded-lg sm:rounded-[10px] shadow-[0px_4px_6px_-4px_#ff680033,0px_10px_15px_-3px_#ff680033] bg-[linear-gradient(90deg,rgba(231,0,11,1)_0%,rgba(255,105,0,1)_100%)] hover:opacity-90"
+          >
+            <a href={TELEGRAM_LINK} target="_blank" rel="noopener noreferrer">
+              <span className="text-white text-[12px] sm:text-[13.1px] text-center tracking-[0] leading-5 sm:leading-6 [font-family:'Robloxian_2-Black',Helvetica] font-black">
+                Подробнее о залоговых кредитах
+              </span>
+            </a>
           </Button>
         </div>
 
